@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="./style.css" media="all">
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="menu-sanduiche">
+                <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="menu" id="lista-menu">
+                    <ul class="lista-menu" >
+                        <li style="margin-top:7px;" id="ACAO">AÇÃO</li>
+                        <hr>
+                        <li id="AVENTURA">AVENTURA</li>
+                        <hr>
+                        <li id="COMEDIA">COMÉDIA</li>
+                        <hr>
+                        <li id="DRAMA">DRAMA</li>
+                        <hr>
+                        <li id="ROMANCE">ROMANCE</li>
+                        <hr>
+                        <li id="SUSPENSE">SUSPENSE</li>
+                        <hr>
+                        <li id="TERROR">TERROR</li>
+                        <hr>
+                        <li style="margin-bottom: 7px;" id="SERIES">SÉRIES</li>
+                    </ul>
+                </div>
+            </div>
+            <h1 class="titulo">FILMES ONLINE HD</h1>
+            <div class="conteudo-pesquisa">
+                <img src="/icones/pesquisar.png" class="icone-pesquisa">
+                <input type="search" placeholder="Pesquisar" oninput="pesquisar()" id="entrada">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-carousel">
+            <div class="carousel">
+              <div class="carousel__face"><span>This is something</span></div>
+              <div class="carousel__face"><span>Very special</span></div>
+              <div class="carousel__face"><span>Special is the key</span></div>
+              <div class="carousel__face"><span>For you</span></div>
+              <div class="carousel__face"><span>Just give it</span></div>
+              <div class="carousel__face"><span>A try</span></div>
+              <div class="carousel__face"><span>And see</span></div>
+              <div class="carousel__face"><span>How IT Works</span></div>
+              <div class="carousel__face"><span>Woow</span></div>
+            </div>
+          </div>
+        <a href="http://127.0.0.1:5501/pagina2/filme.html">
+            <div id="lista_filme">
+            </div>
+        </a>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./scripts/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+</body>
+
+</html>

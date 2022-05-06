@@ -1,0 +1,81 @@
+{
+    "descricao": [
+        {
+            "id": "1",
+            "titulo":"homem de ferro 1",
+            "sinopse": "Tony Stark é um industrial bilionário e inventor brilhante que realiza testes bélicos no exterior, mas é sequestrado por terroristas que o forçam a construir uma arma devastadora. Em vez disso, ele constrói uma armadura blindada e enfrenta seus sequestradores. Ao voltar para os EUA, Stark aprimora a armadura e a utiliza para combater o crime.",
+            "ano": 2008,
+            "genero": "Acão/Aventura",
+            "duracao": "2h 6m",
+            "nota": 8.7,
+            "video": "//streamadblockplus.com/get_video?id=KWK88QDW8Os09Vm&expires=1650904458&ip=FRuOExySEOWNFt&token=Q6OPQymai_-x&stream=1",
+            "catalogo": "https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"
+        },
+        {
+            "id": "2",
+            "titulo": "homem de ferro 2",
+            "sinopse": "Em um mundo ciente da existência do Homem de Ferro, o inventor bilionário Tony Stark sofre pressão de todos os lados para compartilhar sua tecnologia com as forças armadas. Ele resiste para divulgar os segredos de sua inigualável armadura, com medo de que estas informações caiam nas mãos erradas. Com a bela Pepper Potts e o amigo 'Rhodey' Rhodes ao seu lado, Tony precisa forjar novas alianças e confrontar um inimigo poderoso.",
+            "ano": 2010,
+            "genero": "Acão/Aventura",
+            "duracao": "2h 5m",
+            "nota": 8.8,
+            "video": "https://medusinha3.s3.eu-central-1.wasabisys.com/cdn2/homemdeferro2-dub-480p.mp4",
+            "catalogo": "https://upload.wikimedia.org/wikipedia/pt/thumb/9/9a/Homem_de_Ferro_2_-_Poster.jpg/250px-Homem_de_Ferro_2_-_Poster.jpg"
+        },
+        {
+            "id": "3",
+            "titulo": "homem de ferro 3",
+            "sinopse": "Depois de um inimigo reduzir o mundo de Tony Stark a destroços, o Homem de Ferro precisa aprender a confiar em seus instintos para proteger aqueles que ama, especialmente sua namorada, e lutar contra seu maior medo: o fracasso.",
+            "ano": 2013,
+            "genero": "Acão/Aventura",
+            "duracao": "2h 10m",
+            "nota": 8.9,
+            "video": "https://xaia.evosrv.com/EvoSrv/02Gyn4ljLadBo8qzwYnK.mp4?md5=nh4IebgEoBuTpcPxZpS6uA&expires=1650847043",
+            "catalogo": "https://m.media-amazon.com/images/I/91TkkU3jdzL._AC_SX425_.jpg"
+        },
+        {
+            "id": "4",
+            "titulo": "os vingadores",
+            "sinopse": "Loki, o irmão de Thor, ganha acesso ao poder ilimitado do cubo cósmico ao roubá-lo de dentro das instalações da S.H.I.E.L.D. Nick Fury, o diretor desta agência internacional que mantém a paz, logo reúne os únicos super-heróis que serão capazes de defender a Terra de ameaças sem precedentes. Homem de Ferro, Capitão América, Hulk, Thor, Viúva Negra e Gavião Arqueiro formam o time dos sonhos de Fury, mas eles precisam aprender a colocar os egos de lado e agir como um grupo em prol da humanidade.",
+            "ano": 2012,
+            "genero": "Acão/Aventura",
+            "duracao": "2h 23m",
+            "nota": 8.7,
+            "video": "https://www1312.ff-03.com/token=n2JPQgZ3txQEn0wRm_f_Kw/1650850923/2804:14c::/67/7/54/c70f2cd6d7b0641efdad9846fcea2547-360p.mp4",
+            "catalogo": "https://www.themoviedb.org/t/p/w342/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"
+        },
+        {
+            "id": "5",
+            "titulo": "os vingadores era de ultron",
+            "sinopse": "Ao tentar proteger o planeta de ameaças, Tony Stark constrói um sistema de inteligência artificial que cuidaria da paz mundial. O projeto acaba dando errado e gera o nascimento do Ultron. Com o destino da Terra em jogo, Capitão América, Homem de Ferro, Thor, Hulk, Viúva Negra e Gavião Arqueiro terão que se unir para mais uma vez salvar a raça humana da extinção.",
+            "ano": 2015,
+            "genero": "Acão/Aventura",
+            "duracao": "2h 21m",
+            "nota": 8.6,
+            "video": "https://luma.evosrv.com/nvme_caching/LC0NQJtbpYcAUPKGFdMl.mp4",
+            "catalogo": "https://www.cineteka.com/img/filmes/014290_big.jpg"
+        },
+        {
+            "id": "6",
+            "titulo": "os vingadores guerra infinita",
+            "sinopse": "Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos. Em uma missão para coletar todas as seis pedras infinitas, Thanos planeja usá-las para infligir sua vontade maléfica sobre a realidade.",
+            "ano": 2018,
+            "genero": "Acão/Aventura",
+            "duracao": "2h 29m",
+            "nota": 9.1,
+            "video": "https://vilea.evosrv.com/EvoSrv/se8uGVgrGCw9lp08rHVl.mp4?md5=Pwn-VGD5ZAmvqFiLRtQJKw&expires=1650847813",
+            "catalogo": "https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/Avengers_Infinity_War.jpg/250px-Avengers_Infinity_War.jpg"
+        },
+        {
+            "id": "7",
+            "titulo": "os vingadores ultimato",
+            "sinopse": "Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.",
+            "ano": 2019,
+            "genero": "Acão/Ficção cientifíca",
+            "duracao": "3h 2m",
+            "nota": 9.4,
+            "video": "https://white.evosrv.com/EvoSrv/8oxCpjdlJzGEJwCOee6f.mp4?md5=Nv-X97JxOtmTeS7by8wmtA&expires=1650848054",
+            "catalogo": "https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035"
+        }
+    ]
+}

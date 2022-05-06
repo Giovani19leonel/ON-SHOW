@@ -1,0 +1,256 @@
+html{
+    display: flex;
+}
+body{
+    background-color: black; 
+    margin: auto;
+    height: 1000px;
+}
+header{
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+.cabecalho {
+    display: flex;
+    background-color: #2F2F2F;
+    height: 75px;
+    align-items: center;
+}
+.menu-sanduiche{
+    display: flex;
+    flex-direction: column;
+    
+}
+.menu {
+    /* background-color: #111111;
+    opacity: 0; */
+    display: flex;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    margin-top: 32px;
+    margin-left: 0px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.lista-menu {
+    list-style: none;
+    text-align: start;
+    opacity: 0;
+    background-color: #141212;
+    padding: 5px;
+    width: 145  px;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+hr {
+	border: 10px;
+    border-radius: 25px;
+	border-top: 1px solid #686868;
+}
+.change .lista-menu {
+    opacity: 100;
+    transition: 1s;
+}
+.container {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 25px;
+    /* position: fixed;
+    height: 39px; */
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+.titulo{
+    font-family: 'Roboto';
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    width: 100vw;
+    margin-right: -175px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.descricao-pesquisa{
+    display: flex;
+}
+.descricao h1{
+    font-size:25px;
+}
+.descricao p{
+    font-size: 20px;
+}
+.conteudo-pesquisa{
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+}
+.conteudo-pesquisa h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.icone-pesquisa
+{
+    display: flex;
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+    position:absolute;
+}
+.conteudo-pesquisa input{
+    height: 35px;
+    width: 200px;
+    border-radius: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-inline-start: 30px;
+    outline: 0;
+    cursor: pointer;
+}
+.filmes{
+    margin-top: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+img{
+    width: 250px;
+    height: 250px;
+    display: flex;
+}
+.filme_atual{
+    display: flex;
+    margin: auto;
+    margin-top: 65px;
+    margin-bottom: 100px;
+}
+.filme_descricao{
+    margin-top: 20vh;
+    display:flex;
+    align-items: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    border-width: 5px;
+    border-radius: 80px;
+    border-color:darkgrey;
+    border-style: solid;
+    flex-direction: column;
+}
+.descricao_filme{
+    color: grey;
+}
+.elementosdescricao{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.entrada-json{
+    margin-left: 25px;
+    margin-right: 25px;
+    color: blue;
+}
+.sinopse{
+    display: flex;
+    color: grey;
+}
+
+
+  .container-carousel {
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+  }
+  
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+  }
+  
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(120deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(320deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+  

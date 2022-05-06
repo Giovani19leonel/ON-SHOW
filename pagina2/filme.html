@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="../style.css" media="all">
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">GHFLIX</h1>
+    </header>
+    <main>
+        <div class="filme_descricao">
+            <img id="filme_pagina_2" class="filme_atual">
+            <div class="descricao_filme">
+                <h1 style="text-align: center">DESCRIÇÃO</h1>
+                <div class="elementosdescricao">
+                    <h2>Nota:</h2>
+                    <h2 class="entrada-json" id="nota"></h2>
+                    <h2>Duração:</h2>
+                    <h2 class="entrada-json" id="duracao"></h2>
+                    <h2>Genero:</h2>
+                    <h2 class="entrada-json" id="genero"></h2>
+                    <h2>Ano:</h2>
+                    <h2 class="entrada-json" id="ano"></h2>
+                </div>
+                <!-- <video src="homemdeferro.mp4" autoplay controls></video> -->
+            </div>
+            <div class="sinopse">
+                <h2 style="margin-left: 25px;">Sinopse:</h2>
+                <h3 style="margin-left: 25px; margin-right: 30px" id="sinopse-filme"></h3>
+            </div>
+            <video width="920" height="440" controls
+                src="" id="filme-video" style="display: none;">
+            </video>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="../scripts/filme.js"></script>
+</body>
+
+</html>
