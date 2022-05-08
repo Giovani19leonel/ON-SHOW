@@ -438,7 +438,7 @@
             "duracao": "2h 49m",
             "nota": 8.7,
             "video": "",
-            "catalogo": "https://static.wikia.nocookie.net/terramedia/images/f/fe/Hobbit_jornadainesperada_46.jpg/revision/latest?cb=20141210190655"
+            "catalogo": "https://s2.glbimg.com/zyaaSEbf4qZ6BNkc778luqyVhkE=/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2019/r/0/u4CVkTSpKCAj94NO5G1w/05cul-200-dvd2-d30-img01.jpg"
         },
         {
             "id": "41",
@@ -549,6 +549,16 @@
             "nota": 8.7,
             "video": "",
             "catalogo": "https://www.moderna.com.br/data/files/AB/40/CF/B5/8A0573105585E47328A8A8A8/Shrek.jpg"
+        },{
+            "id": "51",
+            "titulo": "shrek 2",
+            "sinopse": "Shrek e Fiona acabaram de voltar da lua de mel e vivem felizes em sua casa no pântano. O casal recebe um convite dos pais da princesa, que querem conhecer o novo genro, para um jantar no castelo. Eles ficaram sabendo que Fiona havia se casado com o seu verdadeiro amor, mas o que eles ainda não sabem é que este amor é um ogro mal-educado de mais de 300 quilos, que conta com um burro falante como melhor amigo.",
+            "ano": 2004,
+            "genero": "Comédia/Fantasia",
+            "duracao": "1h 33m",
+            "nota": 9.0,
+            "video": "",
+            "catalogo": "https://m.media-amazon.com/images/I/51AnEd+eyzL._AC_SX355_.jpg"
         }
     ]
 }

@@ -10,6 +10,8 @@ var lista_nome = ["homemdeferro1", "homemdeferro2", "homemdeferro3", "osvingador
 var lista_filmes = [homemdeferro1, homemdeferro2, homemdeferro3, osvingadores, osvingadoreseradeultron, osvingadoresguerrainfinita, osvingadoresultimato]
 var lista = [lista_nome, lista_filmes]
 var mostrar_filmes = [true, false, false, false, false, false, false]
+var ultimos_adicionados = []
+
 
 /* CONSTRUIR O BOTAO DE AVANÇO E DESAVANÇO E TIRAR O CONTROLE DO CAROUSEL.JS */
 
@@ -52,12 +54,72 @@ $(document).ready(function () {
 
         // DADOS: 
         let titulos_filmes = [];
+        let catalogo_filmes = []
 
 
         dados = data.descricao
         for (let i = 0; i < dados.length; i++) {
             titulos_filmes.push(dados[i].titulo)
+            catalogo_filmes.push(dados[i].catalogo)
         }
+
+        for (let i = (dados.length - 18); i < dados.length; i++) {
+            ultimos_adicionados.push(dados[i].catalogo)
+        }
+
+        for (let i = 0; i < 7; i++) {
+            let li = $("<li/>", {
+                class: "item-populares",
+                id: "fila-um-populares-" + i
+            });
+            $("#lista-um-adicionados").append(li);
+            /*  console.log(i) */
+        }
+        for (let i = 0; i < 6; i++) {
+            let img = $("<img/>", {
+                src: ultimos_adicionados[i]
+            });
+            $("#fila-um-populares-" + i).append(img)
+        }
+
+
+
+        for (let i = 0; i < 7; i++) {
+            let li = $("<li/>", {
+                class: "item-populares",
+                id: "fila-dois-populares-" + i
+            });
+            $("#lista-dois-adicionados").append(li);
+        }
+        for (let i = 6; i < 12; i++) {
+            let img = $("<img/>", {
+                src: ultimos_adicionados[i]
+            });
+            $("#fila-dois-populares-" + (i - 6)).append(img)
+        }
+
+        for (let i = 0; i < 7; i++) {
+            let li = $("<li/>", {
+                class: "item-populares",
+                id: "fila-tres-populares-" + i
+            });
+            $("#lista-tres-adicionados").append(li);
+        }
+        for (let i = 12; i < 18; i++) {
+            let img = $("<img/>", {
+                src: ultimos_adicionados[i]
+            });
+            $("#fila-tres-populares-" + (i - 12)).append(img)
+        }
+
+        /*       img = $("<img/>", {
+                  alt: titulos_filmes[i],
+                  src: data.descricao[i].catalogo,
+              });
+              $("#" + id_filmes[i]).append(img);
+              $(populares-fila-um).append("<li></li>"); */
+
+
     });
 });
 
@@ -494,16 +556,16 @@ botao2.addEventListener('click',
     });
 
 
-
-var div_filmes = document.getElementById("lista_filme");
+/* 
+var div_filmes = document.getElementById("lista_filme"); */
 /* const myObj = {}
 const myJSON = JSON.stringify(myObj) */
-div_filmes.addEventListener('click',
+/* div_filmes.addEventListener('click',
     function (e) {
         filme_clicado_src = e.target.src;
         filme_clicado_id = e.target.alt
         enviar_filme(filme_clicado_src, filme_clicado_id)
-    });
+    }); */
 
 
 
