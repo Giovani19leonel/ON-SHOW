@@ -3,6 +3,7 @@
 
 <head>
     <link type="text/css" rel="stylesheet" href="./style.css" media="all">
+    <link type="text/css" rel="stylesheet" href="./carousel.css" media="all">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
                     <div class="bar3"></div>
                 </div>
                 <div class="menu" id="lista-menu">
-                    <ul class="lista-menu" >
+                    <ul class="lista-menu">
                         <li style="margin-top:7px;" id="ACAO">AÇÃO</li>
                         <hr>
                         <li id="AVENTURA">AVENTURA</li>
@@ -34,7 +35,7 @@
                     </ul>
                 </div>
             </div>
-            <h1 class="titulo">FILMES ONLINE HD</h1>
+            <h1 class="titulo">ON-SHOW</h1>
             <div class="conteudo-pesquisa">
                 <img src="/icones/pesquisar.png" class="icone-pesquisa">
                 <input type="search" placeholder="Pesquisar" oninput="pesquisar()" id="entrada">
@@ -42,24 +43,150 @@
         </div>
     </header>
     <main>
-        <div class="container-carousel">
-            <div class="carousel">
-              <div class="carousel__face"><span>This is something</span></div>
-              <div class="carousel__face"><span>Very special</span></div>
-              <div class="carousel__face"><span>Special is the key</span></div>
-              <div class="carousel__face"><span>For you</span></div>
-              <div class="carousel__face"><span>Just give it</span></div>
-              <div class="carousel__face"><span>A try</span></div>
-              <div class="carousel__face"><span>And see</span></div>
-              <div class="carousel__face"><span>How IT Works</span></div>
-              <div class="carousel__face"><span>Woow</span></div>
+        <div class="conteudo-destaque">
+            <hr>
+            <h1 class="destaque">EM DESTAQUE</h1>
+            <hr>
+        </div>
+        <!--CARROSSEL-->
+        <div class="gallery">
+            <div class="gallery-container">
+                <img class="gallery-item gallery-item-1"
+                    src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg" data-index="1"
+                    id="foto1">
+                <img class="gallery-item gallery-item-2"
+                    src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/9a/Homem_de_Ferro_2_-_Poster.jpg/250px-Homem_de_Ferro_2_-_Poster.jpg"
+                    data-index="2" id="foto2">
+                <img class="gallery-item gallery-item-3"
+                    src="https://m.media-amazon.com/images/I/91TkkU3jdzL._AC_SX425_.jpg" data-index="3" id="foto3">
+                <img class="gallery-item gallery-item-4"
+                    src="https://www.themoviedb.org/t/p/w342/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg" data-index="4" id="foto4">
+                <img class="gallery-item gallery-item-5"
+                    src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/Avengers_Infinity_War.jpg/250px-Avengers_Infinity_War.jpg"
+                    data-index="5" id="foto5">
+                <img class="gallery-item gallery-item-6"
+                    src="https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035"
+                    data-index="6" id="foto6">
+                <img class="gallery-item gallery-item-7" src="https://www.cineteka.com/img/filmes/014290_big.jpg"
+                    data-index="7" id="foto7">
+                <div class="controles">
+                    <button type="button" class="voltar" id="voltar"></button>
+                    <button type="button" class="avancar" id="avancar"></button>
+                </div>
             </div>
-          </div>
-        <a href="http://127.0.0.1:5501/pagina2/filme.html">
+        </div>
+        <div class="radio">
+            <input type="radio" name="position" id="botao1" checked />
+            <input type="radio" name="position" id="botao2" />
+            <input type="radio" name="position" id="botao3" />
+            <input type="radio" name="position" id="botao4" />
+            <input type="radio" name="position" id="botao5" />
+            <input type="radio" name="position" id="botao6" />
+            <input type="radio" name="position" id="botao7" />
+        </div>
+        <!--CARROSSEL-->
+        <hr class="divisao-carrossel">
+        <div class="populares">
+            <div class="cabecalho-populares">
+                <img src="./icones/estrela.png" class="estrela">
+                <h1 class="titulo-populares">Mais populares</h1>
+            </div>
+            <div class="filmes-populares">
+                <ul class="populares-fila-um">
+                    <li class="item-populares"><img
+                            src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                    <li class="item-populares"><img
+                            src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/9a/Homem_de_Ferro_2_-_Poster.jpg/250px-Homem_de_Ferro_2_-_Poster.jpg">
+                    </li>
+                    <li class="item-populares"><img
+                            src="https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035">
+                    </li>
+                    <li class="item-populares"><img src="https://www.cineteka.com/img/filmes/014290_big.jpg"></li>
+                    <li class="item-populares"><img
+                            src="https://www.themoviedb.org/t/p/w342/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"></li>
+                    <li class="item-populares"><img
+                            src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                </ul>
+                <ul class="populares-fila-dois">
+                    <li class="item-populares"><img
+                            src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/Avengers_Infinity_War.jpg/250px-Avengers_Infinity_War.jpg">
+                    </li>
+                    <li class="item-populares"><img
+                            src="https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035">
+                    </li>
+                    <li class="item-populares"><img
+                            src="https://m.media-amazon.com/images/I/91TkkU3jdzL._AC_SX425_.jpg"></li>
+                    <li class="item-populares"><img
+                            src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                    <li class="item-populares"><img
+                            src="https://www.themoviedb.org/t/p/w342/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"></li>
+                    <li class="item-populares"><img
+                            src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                </ul>
+            </div>
+            <div class="cabecalho-adicionados">
+                <img src="./icones/filme.png" class="estrela">
+                <h1 class="titulo-populares">Ultimos adicionados</h1>
+            </div>
+            <div class="ultimos-adicionados">
+                <div class="ultimos-adicionar-filmes">
+                    <ul class="populares-fila-um">
+                        <li class="item-populares"><img
+                                src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/Avengers_Infinity_War.jpg/250px-Avengers_Infinity_War.jpg">
+                        </li>
+                        <li class="item-populares"><img
+                                src="https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035">
+                        </li>
+                        <li class="item-populares"><img
+                                src="https://m.media-amazon.com/images/I/91TkkU3jdzL._AC_SX425_.jpg"></li>
+                        <li class="item-populares"><img
+                                src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                        <li class="item-populares"><img
+                                src="https://www.themoviedb.org/t/p/w342/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"></li>
+                        <li class="item-populares"><img
+                                src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                    </ul>
+                    <ul class="populares-fila-dois">
+                        <li class="item-populares"><img
+                                src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/Avengers_Infinity_War.jpg/250px-Avengers_Infinity_War.jpg">
+                        </li>
+                        <li class="item-populares"><img
+                                src="https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035">
+                        </li>
+                        <li class="item-populares"><img
+                                src="https://m.media-amazon.com/images/I/91TkkU3jdzL._AC_SX425_.jpg"></li>
+                        <li class="item-populares"><img
+                                src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                        <li class="item-populares"><img
+                                src="https://www.themoviedb.org/t/p/w342/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"></li>
+                        <li class="item-populares"><img
+                                src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                    </ul>
+                    <ul class="populares-fila-dois">
+                        <li class="item-populares"><img
+                                src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/Avengers_Infinity_War.jpg/250px-Avengers_Infinity_War.jpg">
+                        </li>
+                        <li class="item-populares"><img
+                                src="https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035">
+                        </li>
+                        <li class="item-populares"><img
+                                src="https://m.media-amazon.com/images/I/91TkkU3jdzL._AC_SX425_.jpg"></li>
+                        <li class="item-populares"><img
+                                src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                        <li class="item-populares"><img
+                                src="https://www.themoviedb.org/t/p/w342/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"></li>
+                        <li class="item-populares"><img
+                                src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="http://127.0.0.1:5501/pagina2/filme.html">
             <div id="lista_filme">
             </div>
-        </a>
+        </a> -->
     </main>
+    <script src="./scripts/carousel.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="./scripts/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
