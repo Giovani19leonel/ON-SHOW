@@ -7,7 +7,7 @@ console.log(obj[1].filme_id)
 var pagina_genero = document.getElementById("genero");
 var pagina_nota = document.getElementById("nota");
 var pagina_duracao = document.getElementById("duracao");
-var pagina_ano = document.getElementById("ano"); 
+var pagina_ano = document.getElementById("ano");
 var pagina_sinopse = document.getElementById("sinopse-filme");
 var pagina_filme = document.getElementById("filme-video")
 
@@ -31,3 +31,15 @@ teste = fetch("../dados.json")
         }
 
     });
+
+var type = "filme";
+var imdb = "tt5272052";
+var season = "";
+var episode = "";
+warezPlugin(type, imdb, season, episode);
+function warezPlugin(type, imdb, season, episode) {
+    if (type == "filme") { season = ""; episode = ""; } else { if (season !== "") { season = "/" + season; } if (episode !== "") { episode = "/" + episode; } }
+    var frame = document.getElementById('embedWarezCdn');
+    frame.innerHTML += '<iframe src="https://embed.warezcdn.com/' + type + '/' + imdb + season + episode + '" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" + style="height:800px; width:800px;"></iframe>';
+}
+
