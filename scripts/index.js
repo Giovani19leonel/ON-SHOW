@@ -1,17 +1,5 @@
-var homemdeferro1 = document.getElementById("homemdeferro1");
-var homemdeferro2 = document.getElementById("homemdeferro2");
-var homemdeferro3 = document.getElementById("homemdeferro3");
-var osvingadores = document.getElementById("osvingadores");
-var osvingadoreseradeultron = document.getElementById("osvingadoreseradeultron");
-var osvingadoresguerrainfinita = document.getElementById("osvingadoresguerrainfinita");
-var osvingadoresultimato = document.getElementById("osvingadoresultimato");
-var filme_pagina_2 = document.getElementById("filme_pagina_2");
-var lista_nome = ["homemdeferro1", "homemdeferro2", "homemdeferro3", "osvingadores", "osvingadoreseradeultron", "osvingadoresguerrainfinita", "osvingadoresultimato"]
-var lista_filmes = [homemdeferro1, homemdeferro2, homemdeferro3, osvingadores, osvingadoreseradeultron, osvingadoresguerrainfinita, osvingadoresultimato]
-var lista = [lista_nome, lista_filmes]
 var mostrar_filmes = [true, false, false, false, false, false, false]
 var ultimos_adicionados = []
-
 
 /* CONSTRUIR O BOTAO DE AVANÇO E DESAVANÇO E TIRAR O CONTROLE DO CAROUSEL.JS */
 
@@ -49,9 +37,10 @@ var radio7 = document.getElementById("botao7");
 
 var radion = document.getElementsByName("position");
 
-$(document).ready(function () {
-    $.get("../dados.json", function (data) {
-
+function ultimos_add() {
+    fetch("../dados.json").then(function (response) {
+        return response.json()
+    }).then(function (data) {
         // DADOS: 
         let titulos_filmes = [];
         let catalogo_filmes = []
@@ -118,17 +107,108 @@ $(document).ready(function () {
               });
               $("#" + id_filmes[i]).append(img);
               $(populares-fila-um).append("<li></li>"); */
+    });
+}
+ultimos_add()
+/* $(document).ready(function () {
+    $.get("../dados.json", function (data) {
+
+       
+        let titulos_filmes = [];
+        let catalogo_filmes = []
 
 
+        dados = data.descricao
+        for (let i = 0; i < dados.length; i++) {
+            titulos_filmes.push(dados[i].titulo)
+            catalogo_filmes.push(dados[i].catalogo)
+        }
+
+        for (let i = (dados.length - 18); i < dados.length; i++) {
+            ultimos_adicionados.push(dados[i].catalogo)
+        }
+
+        for (let i = 0; i < 7; i++) {
+            let li = $("<li/>", {
+                class: "item-populares",
+                id: "fila-um-populares-" + i
+            });
+            $("#lista-um-adicionados").append(li);
+        }
+        for (let i = 0; i < 6; i++) {
+            let img = $("<img/>", {
+                src: ultimos_adicionados[i]
+            });
+            $("#fila-um-populares-" + i).append(img)
+        }
+
+
+
+        for (let i = 0; i < 7; i++) {
+            let li = $("<li/>", {
+                class: "item-populares",
+                id: "fila-dois-populares-" + i
+            });
+            $("#lista-dois-adicionados").append(li);
+        }
+        for (let i = 6; i < 12; i++) {
+            let img = $("<img/>", {
+                src: ultimos_adicionados[i]
+            });
+            $("#fila-dois-populares-" + (i - 6)).append(img)
+        }
+
+        for (let i = 0; i < 7; i++) {
+            let li = $("<li/>", {
+                class: "item-populares",
+                id: "fila-tres-populares-" + i
+            });
+            $("#lista-tres-adicionados").append(li);
+        }
+        for (let i = 12; i < 18; i++) {
+            let img = $("<img/>", {
+                src: ultimos_adicionados[i]
+            });
+            $("#fila-tres-populares-" + (i - 12)).append(img)
+        }
     });
 });
-
+ */
 
 /* const myObj = {}
 const myJSON = JSON.stringify(myObj) */
 lista_menu.addEventListener('click',
     function (e) {
         console.log(e.target.id)
+        if (e.target.id == "ACAO") {
+            $("main").css("display", "none")
+            $("#home-acao").css("display", "block")
+        }
+        else if (e.target.id == "AVENTURA") {
+            $("main").css("display", "none")
+            $("#home-aventura").css("display", "block")
+        }
+        else if (e.target.id == "COMEDIA") {
+            $("main").css("display", "none")
+            $("#home-comedia").css("display", "block")
+        }
+        else if (e.target.id == "DRAMA") {
+            $("main").css("display", "none")
+            $("#home-drama").css("display", "block")
+        }
+        else if (e.target.id == "ROMANCE") {
+            $("main").css("display", "none")
+            $("#home-romance").css("display", "block")
+        } else if (e.target.id == "SUSPENSE") {
+            $("main").css("display", "none")
+            $("#home-suspense").css("display", "block")
+        } else if (e.target.id == "TERROR") {
+            $("main").css("display", "none")
+            $("#home-terror").css("display", "block")
+        } else if (e.target.id == "SERIES") {
+            $("main").css("display", "none")
+            $("#home-series").css("display", "block")
+        }
     });
 
 radio1.addEventListener('click',

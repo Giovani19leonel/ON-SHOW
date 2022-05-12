@@ -9,12 +9,14 @@ body {
     width: 100vw;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
+main{
     margin-top: 75px;
+    flex-direction: column;
+    display: none;
 }
-
+.main-home {
+    display: flex;
+}
 header {
     width: 100vw;
     top: 0;
