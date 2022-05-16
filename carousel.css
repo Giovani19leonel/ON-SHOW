@@ -94,7 +94,7 @@
 } */
 
 .gallery-item-4 {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.45), 0 0 25px rgba(255, 255, 255, 0.25), 0 0 30px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.45), 0 0 25px rgba(255, 255, 255, 0.25), 0 0 30px rgba(255, 255, 255, 0.1);
   height: 315px;
   opacity: 1;
   left: 50%;

@@ -9,14 +9,16 @@ body {
     width: 100vw;
 }
 
-main{
+main {
     margin-top: 75px;
     flex-direction: column;
     display: none;
 }
+
 .main-home {
     display: flex;
 }
+
 header {
     width: 100vw;
     top: 0;
@@ -30,6 +32,10 @@ header {
     background-color: #2F2F2F;
     height: 75px;
     align-items: center;
+    opacity: 0.8;
+    width: 99vw;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .menu-sanduiche {
@@ -141,6 +147,7 @@ hr {
     display: flex;
     align-items: center;
     margin-right: 35px;
+    cursor: text;
 }
 
 .conteudo-pesquisa h1 {
@@ -168,9 +175,26 @@ hr {
     outline: 0;
     cursor: pointer;
 }
-.filmes-populares{
+
+.div-populares-0 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50vw;
+}
+
+.div-populares-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50vw;
+    margin-left: calc(((50vw - 600px)/4)*-1);
+}
+
+.filmes-populares {
     margin-left: 5vw;
 }
+
 .filmes {
     margin-top: 60px;
     width: 100vw;
@@ -178,28 +202,34 @@ hr {
     justify-content: space-evenly;
     align-items: center;
 }
+
 .conteudo-destaque {
     display: flex;
     justify-items: center;
     flex-direction: row;
+    font-family: 'Roboto';
 }
-.conteudo-destaque hr{
+
+.conteudo-destaque hr {
     margin-top: 40px;
     height: 2px;
     width: 40vw;
     justify-items: center;
 }
+
 .destaque {
     justify-content: center;
     text-align: center;
-    color: wheat;
+    color: white;
+    opacity: 0.8;
+    text-shadow: 0 5px 5px #6d6d6d;
 }
 
 img {
     border-radius: 5%;
     width: 200px;
     height: 260px;
-    display: flex;
+    display: block;
 }
 
 .filme_atual {
@@ -260,7 +290,8 @@ img {
     display: flex;
     flex-direction: row;
 }
-.cabecalho-adicionados{
+
+.cabecalho-adicionados {
     margin-left: 5vw;
     margin-top: 50px;
     align-items: center;
@@ -274,9 +305,30 @@ img {
 }
 
 .titulo-populares {
+    font-family: 'Roboto';
     margin-left: 20px;
     font-size: 40px;
     color: rgba(136, 136, 136, 1)
+}
+
+.titulosFilmes {
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto';
+    opacity: 0.7;
+    text-shadow: #6d6d6d;
+}
+
+.ultimosTitulosFilmes {
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto';
+    opacity: 0.8;
+    text-shadow: #000000;
 }
 
 .populares-fila-um {
@@ -295,16 +347,88 @@ img {
 }
 
 .item-populares {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
-.ultimos-adicionados{
-    background-color: rgba(137, 137, 137, 0.21)
+.ultimos-adicionados {
+    background-color: rgba(106, 106, 106, 0.21)
 }
-.ultimos-adicionar-filmes{
+
+.ultimos-adicionar-filmes {
     margin-left: 5vw;
 }
 
-ul{
+ul {
     list-style: none;
+}
+
+.filtrado {
+    display: none;
+}
+
+@media (max-width: 1400px) {
+
+    img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .div-populares-1 {
+        margin-left: calc(((50vw - (180px*3))/4)*-1);
+    }
+
+    .populares-fila-um {
+
+        margin-left: -60px;
+    }
+
+    .populares-fila-dois {
+        margin-left: -60px;
+    }
+}
+
+@media (max-width: 1250px) {
+
+    img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .div-populares-1 {
+        margin-left: calc(((50vw - (160*3))/4)*-1);
+    }
+
+    .populares-fila-um {
+
+        margin-left: -40px;
+    }
+
+    .populares-fila-dois {
+        margin-left: -40px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .cabecalho {
+        height: 60px;
+    }
+
+    img {
+        width: 140px;
+        height: 140px;
+
+    }
+
+    .div-populares-1 {
+        margin-left: calc(((50vw - (140*3))/4)*-1);
+    }
+
+    .populares-fila-um {
+
+        margin-left: -40px;
+    }
+
+    .populares-fila-dois {
+        margin-left: -40px;
+    }
 }

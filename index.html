@@ -38,11 +38,11 @@
             <h1 class="titulo">ON-SHOW</h1>
             <div class="conteudo-pesquisa">
                 <img src="/icones/pesquisar.png" class="icone-pesquisa">
-                <input type="search" placeholder="Pesquisar" oninput="pesquisar()" id="entrada">
+                <input type="search" placeholder="Pesquisar" oninput="pesquisar()" id="entrada" style="cursor:text">
             </div>
         </div>
     </header>
-    <main id="home" class="main-home">
+    <main class="main-home">
         <div class="conteudo-destaque">
             <hr>
             <h1 class="destaque">EM DESTAQUE</h1>
@@ -86,42 +86,15 @@
         </div>
         <!--CARROSSEL-->
         <hr class="divisao-carrossel">
-        <div class="populares">
+        <div id="home" class="populares">
             <div class="cabecalho-populares">
                 <img src="./icones/estrela.png" class="estrela">
                 <h1 class="titulo-populares">Mais populares</h1>
             </div>
             <div class="filmes-populares">
-                <ul class="populares-fila-um">
-                    <li class="item-populares"><img
-                            src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
-                    <li class="item-populares"><img
-                            src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/9a/Homem_de_Ferro_2_-_Poster.jpg/250px-Homem_de_Ferro_2_-_Poster.jpg">
-                    </li>
-                    <li class="item-populares"><img
-                            src="https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035">
-                    </li>
-                    <li class="item-populares"><img src="https://www.cineteka.com/img/filmes/014290_big.jpg"></li>
-                    <li class="item-populares"><img
-                            src="https://www.themoviedb.org/t/p/w342/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"></li>
-                    <li class="item-populares"><img
-                            src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                <ul class="populares-fila-um" id="populares-fila-um">
                 </ul>
-                <ul class="populares-fila-dois">
-                    <li class="item-populares"><img
-                            src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/Avengers_Infinity_War.jpg/250px-Avengers_Infinity_War.jpg">
-                    </li>
-                    <li class="item-populares"><img
-                            src="https://lumiere-a.akamaihd.net/v1/images/690x0w_br_9e5801a5.jpeg?region=0%2C0%2C690%2C1035">
-                    </li>
-                    <li class="item-populares"><img
-                            src="https://m.media-amazon.com/images/I/91TkkU3jdzL._AC_SX425_.jpg"></li>
-                    <li class="item-populares"><img
-                            src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
-                    <li class="item-populares"><img
-                            src="https://www.themoviedb.org/t/p/w342/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"></li>
-                    <li class="item-populares"><img
-                            src="https://br.web.img3.acsta.net/medias/nmedia/18/91/79/19/20163665.jpg"></li>
+                <ul class="populares-fila-dois" id="populares-fila-dois">
                 </ul>
             </div>
             <div class="cabecalho-adicionados">
@@ -143,30 +116,42 @@
             <div id="lista_filme">
             </div>
         </a> -->
-    </main>
-    <main id="home-acao" class="main-acao">
-        <h1 style="color: white;">ACÃO</h1>
-    </main>
-    <main id="home-aventura" class="main-aventura">
-        <h1 style="color: white;">AVENTURA</h1>
-    </main>
-    <main id="home-comedia" class="main-comedia">
-        <h1 style="color: white;">COMEDIA</h1>
-    </main>
-    <main id="home-drama" class="main-drama">
-        <h1 style="color: white;">DRAMA</h1>
-    </main>
-    <main id="home-romance" class="main-romance">
-        <h1 style="color: white;">ROMANCE</h1>
-    </main>
-    <main id="home-suspense" class="main-suspense">
-        <h1 style="color: white;">SUSPENSE</h1>
-    </main>
-    <main id="home-terror" class="main-terror">
-        <h1 style="color: white;">TERROR</h1>
-    </main>
-    <main id="home-series" class="main-series">
-        <h1 style="color: white;">SERIES</h1>
+        <div id="home-acao" class="filtrado acao">
+            <h1 style="color: white; text-align: center;">ACÃO</h1>
+            <div>
+                <ul class="populares-fila-um" id="acao-fila-1">
+                </ul>
+                <ul class="populares-fila-dois" id="acao-fila-2">
+                </ul>
+                <ul class="populares-fila-um" id="acao-fila-3">
+                </ul>
+                <ul class="populares-fila-dois" id="acao-fila-4">   
+                </ul>
+                <ul class="populares-fila-dois" id="acao-fila-5">
+                </ul>
+            </div>
+        </div>
+        <div id="home-aventura" class="filtrado aventura">
+            <h1 style="color: white;">AVENTURA</h1>
+        </div>
+        <div id="home-comedia" class="filtrado comedia">
+            <h1 style="color: white;">COMEDIA</h1>
+        </div>
+        <div id="home-drama" class="filtrado drama">
+            <h1 style="color: white;">DRAMA</h1>
+        </div>
+        <div id="home-romance" class="filtrado romance">
+            <h1 style="color: white;">ROMANCE</h1>
+        </div>
+        <div id="home-suspense" class="filtrado suspense">
+            <h1 style="color: white;">SUSPENSE</h1>
+        </div>
+        <div id="home-terror" class="filtrado terror">
+            <h1 style="color: white;">TERROR</h1>
+        </div>
+        <div id="home-series" class="filtrado series">
+            <h1 style="color: white;">SERIES</h1>
+        </div>
     </main>
     <script src="./scripts/carousel.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

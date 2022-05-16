@@ -1,19 +1,7 @@
 var mostrar_filmes = [true, false, false, false, false, false, false]
-var ultimos_adicionados = []
-
-/* CONSTRUIR O BOTAO DE AVANÇO E DESAVANÇO E TIRAR O CONTROLE DO CAROUSEL.JS */
-
-/* teste = fetch("../dados.json")
-    .then(response => {
-        return response.json();
-    })
-    .then(jsondata => {
-        let dados = jsondata.descricao
-        for (let i = 0; i < dados.length; i++) {
-            
-        }
-
-    }); */
+var ultimos_adicionados = []; var filmes_populares = []; var titulo_ultimos_adicionados = [];
+var lista_acao = []; var lista_aventura = []; var lista_comedia = []; var lista_drama = [];
+var lista_romance = []; var lista_suspense = []; var lista_terror = []; var lista_series = [];
 var lista_menu = document.getElementById("lista-menu");
 var filme_principal = "gallery-item gallery-item-3"
 var botao2 = document.getElementById("voltar");
@@ -34,7 +22,9 @@ var radio5 = document.getElementById("botao5");
 var radio6 = document.getElementById("botao6");
 var radio7 = document.getElementById("botao7");
 
-
+let b = fetch("../dados.json").then(function (response) {
+    return response.json()
+})
 var radion = document.getElementsByName("position");
 
 function ultimos_add() {
@@ -43,89 +33,132 @@ function ultimos_add() {
     }).then(function (data) {
         // DADOS: 
         let titulos_filmes = [];
-        let catalogo_filmes = []
-
+        let titulos_filmes_populares = [];
+        let catalogo_filmes = [];
+        let genero_filmes = [];
+        let lista_id = [];
 
         dados = data.descricao
+        for (let i = 0; i < dados.length; i++) {
+            let filmes = dados[i].genero.split("/")
+            filmes.push(dados[i].id)
+            genero_filmes.push(filmes)
+            catalogo_filmes.push(dados[i].catalogo)
+
+        }
+        for (let i = 0; i < dados.length; i++) {
+            for (let j = 0; j < 2; j++) {
+                if (genero_filmes[i][j] == "Ação") {
+                    let filme_id = genero_filmes[i][2]
+                    lista_id.push(filme_id)
+                }
+                if (i == dados.length - 1 && j == 1) {
+                    lista_acao = [lista_id, catalogo_filmes]
+                    console.log(lista_acao[0][5])
+                }
+                /* if (genero_filmes[i][j] == "Aventura") {
+                    let filme_id = genero_filmes[i][2]
+                    lista_aventura.push(filme_id)
+                }
+                if (genero_filmes[i][j] == "Comédia") {
+                    let filme_id = genero_filmes[i][2]
+                    lista_comedia.push(filme_id)
+                }
+                if (genero_filmes[i][j] == "Drama") {
+                    let filme_id = genero_filmes[i][2]
+                    lista_drama.push(filme_id)
+                }
+                if (genero_filmes[i][j] == "Romance") {
+                    let filme_id = genero_filmes[i][2]
+                    lista_romance.push(filme_id)
+                }
+                if (genero_filmes[i][j] == "Suspense") {
+                    let filme_id = genero_filmes[i][2]
+                    lista_suspense.push(filme_id)
+                }
+                if (genero_filmes[i][j] == "Terror") {
+                    let filme_id = genero_filmes[i][2]
+                    lista_terror.push(filme_id)
+                } */
+            }
+        }
+
+        for (let i = 0; i < data.populares.length; i++) {
+            let lista = [data.populares[i].id, data.populares[i].catalogo]
+            filmes_populares.push(lista)
+            titulos_filmes_populares.push(data.populares[i].titulo)
+        }
+
         for (let i = 0; i < dados.length; i++) {
             titulos_filmes.push(dados[i].titulo)
             catalogo_filmes.push(dados[i].catalogo)
         }
-
-        for (let i = (dados.length - 18); i < dados.length; i++) {
-            ultimos_adicionados.push(dados[i].catalogo)
+        for (let i = 0; i < 2; i++) {
+            let div = $("<div/>", {
+                class: "div-populares-" + i,
+                id: "div-populares-um-fila-" + i
+            });
+            $("#populares-fila-um").append(div);
         }
-
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 3; i++) {
             let li = $("<li/>", {
                 class: "item-populares",
-                id: "fila-um-populares-" + i
+                id: "populares-um-" + i
             });
-            $("#lista-um-adicionados").append(li);
+            $("#div-populares-um-fila-0").append(li);
+            /*  console.log(i) */
+        }
+        for (let i = 3; i < 6; i++) {
+            let li = $("<li/>", {
+                class: "item-populares",
+                id: "populares-um-" + i
+            });
+            $("#div-populares-um-fila-1").append(li);
             /*  console.log(i) */
         }
         for (let i = 0; i < 6; i++) {
             let img = $("<img/>", {
-                src: ultimos_adicionados[i]
+                src: filmes_populares[i][1]
             });
-            $("#fila-um-populares-" + i).append(img)
+            let titulo = $("<h1 class=titulosFilmes>" + titulos_filmes_populares[i] + "</h1>");
+            $("#populares-um-" + i).append(img)
+            $("#populares-um-" + i).append(titulo)
         }
-
-
-
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 2; i++) {
+            let div = $("<div/>", {
+                class: "div-populares-" + i,
+                id: "div-populares-dois-fila-" + i
+            });
+            $("#populares-fila-dois").append(div);
+        }
+        for (let i = 6; i < 9; i++) {
             let li = $("<li/>", {
                 class: "item-populares",
-                id: "fila-dois-populares-" + i
+                id: "populares-dois-" + i
             });
-            $("#lista-dois-adicionados").append(li);
+
+            $("#div-populares-dois-fila-0").append(li);
+        }
+        for (let i = 9; i < 12; i++) {
+            let li = $("<li/>", {
+                class: "item-populares",
+                id: "populares-dois-" + i
+            });
+
+            $("#div-populares-dois-fila-1").append(li);
         }
         for (let i = 6; i < 12; i++) {
             let img = $("<img/>", {
-                src: ultimos_adicionados[i]
+                src: filmes_populares[i][1]
             });
-            $("#fila-dois-populares-" + (i - 6)).append(img)
-        }
-
-        for (let i = 0; i < 7; i++) {
-            let li = $("<li/>", {
-                class: "item-populares",
-                id: "fila-tres-populares-" + i
-            });
-            $("#lista-tres-adicionados").append(li);
-        }
-        for (let i = 12; i < 18; i++) {
-            let img = $("<img/>", {
-                src: ultimos_adicionados[i]
-            });
-            $("#fila-tres-populares-" + (i - 12)).append(img)
-        }
-
-        /*       img = $("<img/>", {
-                  alt: titulos_filmes[i],
-                  src: data.descricao[i].catalogo,
-              });
-              $("#" + id_filmes[i]).append(img);
-              $(populares-fila-um).append("<li></li>"); */
-    });
-}
-ultimos_add()
-/* $(document).ready(function () {
-    $.get("../dados.json", function (data) {
-
-       
-        let titulos_filmes = [];
-        let catalogo_filmes = []
-
-
-        dados = data.descricao
-        for (let i = 0; i < dados.length; i++) {
-            titulos_filmes.push(dados[i].titulo)
-            catalogo_filmes.push(dados[i].catalogo)
+            let titulo = $("<h1 class=titulosFilmes>" + titulos_filmes_populares[i] + "</h1>");
+            $("#populares-dois-" + i).append(img)
+            $("#populares-dois-" + i).append(titulo)
         }
 
         for (let i = (dados.length - 18); i < dados.length; i++) {
             ultimos_adicionados.push(dados[i].catalogo)
+            titulo_ultimos_adicionados.push(titulos_filmes[i])
         }
 
         for (let i = 0; i < 7; i++) {
@@ -133,16 +166,17 @@ ultimos_add()
                 class: "item-populares",
                 id: "fila-um-populares-" + i
             });
+
             $("#lista-um-adicionados").append(li);
         }
         for (let i = 0; i < 6; i++) {
             let img = $("<img/>", {
                 src: ultimos_adicionados[i]
             });
+            let titulo = $("<h1 class=ultimosTitulosFilmes>" + titulo_ultimos_adicionados[i] + "</h1>");
             $("#fila-um-populares-" + i).append(img)
+            $("#fila-um-populares-" + i).append(titulo)
         }
-
-
 
         for (let i = 0; i < 7; i++) {
             let li = $("<li/>", {
@@ -155,7 +189,9 @@ ultimos_add()
             let img = $("<img/>", {
                 src: ultimos_adicionados[i]
             });
+            let titulo = $("<h1 class=ultimosTitulosFilmes>" + titulo_ultimos_adicionados[i] + "</h1>");
             $("#fila-dois-populares-" + (i - 6)).append(img)
+            $("#fila-dois-populares-" + (i - 6)).append(titulo)
         }
 
         for (let i = 0; i < 7; i++) {
@@ -169,11 +205,108 @@ ultimos_add()
             let img = $("<img/>", {
                 src: ultimos_adicionados[i]
             });
+            let titulo = $("<h1 class=ultimosTitulosFilmes>" + titulo_ultimos_adicionados[i] + "</h1>");
             $("#fila-tres-populares-" + (i - 12)).append(img)
+            $("#fila-tres-populares-" + (i - 12)).append(titulo)
         }
+
     });
-});
- */
+}
+ultimos_add()
+
+function removerHome() {
+    for (let i = 0; i < 7; i++) {
+        $("#populares-um-" + i).remove()
+    }
+    for (let i = 6; i < 12; i++) {
+        $("#populares-dois-" + i).remove()
+    }
+    for (let i = 0; i < 7; i++) {
+        $("#fila-um-populares-" + i).remove()
+    }
+    for (let i = 0; i < 7; i++) {
+        $("#fila-dois-populares-" + i).remove()
+    }
+    for (let i = 0; i < 7; i++) {
+        $("#fila-tres-populares-" + i).remove()
+    }
+}
+
+function add_img(categoria, lista) {
+
+    let max = lista.length / 30
+    let quantidade_pagina = []
+    console.log(max)
+    let type; let valorFloat; let ultima_pagina
+    if (max % 1 === 0) {
+        type = "int"
+    } else {
+        type = "float"
+    }
+
+    if (type == "float") {
+        valorFloat = Math.round(max)
+        if ((max - valorFloat) < 0) {
+            valorFloat = valorFloat - max
+            valorFloat = valorFloat.toFixed(3)
+            console.log(valorFloat)
+        }
+        else {
+            valorFloat = valorFloat - max
+            valorFloat = valorFloat * -1
+            valorFloat = valorFloat.toFixed(3)
+        }
+        ultima_pagina = 30 * valorFloat
+        max = max - valorFloat
+        for (let i = 0; i < max; i++) {
+            if ((i + 1) == max) {
+                quantidade_pagina.push(ultima_pagina)
+            }
+            else {
+                quantidade_pagina.push(30)
+            }
+        }
+
+        for (let j = 0; j < quantidade_pagina.length; j++) {
+            let indexLista = 1
+            if (j == 0) {
+                for (let i = (quantidade_pagina[j] * (j + 1)) - 30; i < quantidade_pagina[j] * (j + 1); i++) {
+                    for (let k = 1; k < 6; k++)
+                        if ((quantidade_pagina[j] * (j + 1) - i) / 6 == k) {
+                            indexLista = indexLista + 1
+                        }
+                    let li = $("<li/>", {
+                        class: "item-populares",
+                        id: "fila-" + j + "-" + categoria + "-" + i
+                        // id = fila-0-acao-0
+                    });
+                    $("#" + categoria + "-fila-" + indexLista).append(li);
+                }
+                for (let i = (quantidade_pagina[j] * (j + 1)) - 30; i < quantidade_pagina[j] * (j + 1); i++) {
+                    let img = $("<img/>", {
+                        src: lista[i]
+                    });
+                    $("#fila-" + j + "-" + categoria + "-" + i).append(img)
+                }
+            }
+        }
+    }
+
+
+    for (let i = 0; i < 6; i++) {
+        let li = $("<li/>", {
+            class: "item-populares",
+            id: "fila-um-" + categoria + "-" + i
+        });
+        $("#" + categoria + "-fila-um").append(li);
+    }
+    for (let i = 0; i < 6; i++) {
+        let img = $("<img/>", {
+            src: lista[i]
+        });
+        $("#fila-um-" + categoria + "-" + i).append(img)
+    }
+}
 
 /* const myObj = {}
 const myJSON = JSON.stringify(myObj) */
@@ -181,33 +314,43 @@ lista_menu.addEventListener('click',
     function (e) {
         console.log(e.target.id)
         if (e.target.id == "ACAO") {
-            $("main").css("display", "none")
-            $("#home-acao").css("display", "block")
+            $("#home").css("display", "none");
+            removerHome()
+            $(".filtrado").css("display", "none");
+            $("#home-acao").css("display", "block");
+            add_img("acao", lista_acao[1])
         }
         else if (e.target.id == "AVENTURA") {
-            $("main").css("display", "none")
-            $("#home-aventura").css("display", "block")
+            $("#home").css("display", "none");
+            $(".filtrado").css("display", "none");
+            $("#home-aventura").css("display", "block");
         }
         else if (e.target.id == "COMEDIA") {
-            $("main").css("display", "none")
-            $("#home-comedia").css("display", "block")
+            $("#home").css("display", "none");
+            $(".filtrado").css("display", "none");
+            $("#home-comedia").css("display", "block");
         }
         else if (e.target.id == "DRAMA") {
-            $("main").css("display", "none")
-            $("#home-drama").css("display", "block")
+            $("#home").css("display", "none");
+            $(".filtrado").css("display", "none");
+            $("#home-drama").css("display", "block");
         }
         else if (e.target.id == "ROMANCE") {
-            $("main").css("display", "none")
-            $("#home-romance").css("display", "block")
+            $("#home").css("display", "none");
+            $(".filtrado").css("display", "none");
+            $("#home-romance").css("display", "block");
         } else if (e.target.id == "SUSPENSE") {
-            $("main").css("display", "none")
-            $("#home-suspense").css("display", "block")
+            $("#home").css("display", "none");
+            $(".filtrado").css("display", "none");
+            $("#home-suspense").css("display", "block");
         } else if (e.target.id == "TERROR") {
-            $("main").css("display", "none")
-            $("#home-terror").css("display", "block")
+            $("#home").css("display", "none");
+            $(".filtrado").css("display", "none");
+            $("#home-terror").css("display", "block");
         } else if (e.target.id == "SERIES") {
-            $("main").css("display", "none")
-            $("#home-series").css("display", "block")
+            $("#home").css("display", "none")
+            $(".filtrado").css("display", "none");
+            $("#home-series").css("display", "block");
         }
     });
 
@@ -660,21 +803,6 @@ foto4.addEventListener('click',
         console.log(e.target.className)
     });
 
-/* BOTAO RADIO TABELA:
-BOTAO1 - filme1 -  gallery-item-1
-         filme2 -   gallery-item-2
-         filme3 -   gallery-item-3
-         filme4 -   gallery-item-4
-         filme5 -   gallery-item-5
-         filme6 -   gallery-item-6
-         filme7 -   gallery-item-7
-    
-
-/* for (let i = 0; i < lista_filmes.length; i++) {
-    mostrar_filmes.push(false);
-    lista[1][i].style.display = 'none';
-}
- */
 function enviar_filme(filme_atual, id) {
     const myObj = [{ filme: filme_atual }, { filme_id: id }]
     const myJSON = JSON.stringify(myObj);
